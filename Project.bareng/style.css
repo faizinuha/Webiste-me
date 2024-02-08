@@ -9,6 +9,8 @@
 }
 
 section {
+  background-color: var(--bs-body-bg);
+
   padding-top: 5rem;
 }
 

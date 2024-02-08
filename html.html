@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+
+  <input type='text' id='input' />
+  <input type='button' value='add to list' id='add' />
+
+  <ul id='list'>
+    <li> <b>Topics</b></li>
+  </ul>
+  
+  <h3>
+    
+  <span id="sum">0 </span>
+    
+   <button onclick="sumvar()">Click Here To See The Sum</button>
+
+<script type="text/javascript">
+function reply_click(clicked_id)
+{
+    alert(clicked_id);
+}
+</script> 
+    
+  </h3>
+
+</body>
+  
+<script>
+  var sum = 0;
+
+document.getElementById("add").onclick = function() {
+  var text = document.getElementById("input").value;
+  var li = document.createElement("li");
+  li.innerText = text;
+  sum += parseInt(text);
+  
+  document.getElementById("list").appendChild(li);
+  document.getElementById("sum").innerHTML = sum;
+}
+  
+  function sumvar() {
+    alert("The sum of your numbers are "+document.getElementById("sum").innerHTML);
+  }
+  </script>
+  
+  
+</html>
